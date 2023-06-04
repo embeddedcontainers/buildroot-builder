@@ -15,5 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Buildroot dependencies
+        run: |
+          apt install build-essential gcc g++ cpio rsync wget libncurses-dev
+
       - name: Git clone Buildroot
         run: git clone https://github.com/buildroot/buildroot
